@@ -11,7 +11,7 @@
     <title>update</title>
 </head>
 <body>
-    <form action="<%request.getContextPath()%>/link/update" method="post">
+<form action="<%=request.getContextPath()%>/link/update" method="post">
         <input type="hidden" name="id" value="${id}">
         链接名称:<input type="text" value="${linkName}" /><br>
         链接地址:<input type="text" value="${linkUrl}" />
