@@ -1,13 +1,15 @@
 package com.fzj.blog.pojo;
 
+import java.io.Serializable;
+
 /**
  * Created by j on 2016/9/29.
  */
-public class Link {
+public class Link implements Serializable{
     private Integer id;
     private String linkName;
     private String linkUrl;
-    private String orderNo;
+    private Integer orderNo;
 
     public Integer getId() {
         return id;
@@ -33,12 +35,11 @@ public class Link {
         this.linkUrl = linkUrl;
     }
 
-    public String getOrderNo() {
+    public Integer getOrderNo() {
         return orderNo;
     }
 
-    public void setOrderNo(String orderNo) {
+    public void setOrderNo(Integer orderNo) {
         this.orderNo = orderNo;
     }
-
 }

@@ -24,6 +24,7 @@
         <td>#</td>
         <td>名称</td>
         <td>地址</td>
+        <td>排序</td>
     </tr>
     </thead>
     <tbody>
@@ -32,7 +33,8 @@
                 <td>${l.index+1}</td>
                 <td>${ll.linkName}</td>
                 <td>${ll.linkUrl}</td>
-                <td><a onclick="return confirm('确定要删除吗?')" href="<%=request.getContextPath()%>/link/del/${ll.id}" class="btn btn-danger">删除</a></td>
+                <td>${ll.orderNo}</td>
+                <td><a onclick="return confirm('确定要删除吗?')" href="<%=request.getContextPath()%>/link/delete/${ll.id}" class="btn btn-danger">删除</a></td>
                 <td><a href="<%=request.getContextPath()%>/link/updateUI/${ll.id}" class="btn btn-info">修改</a></td>
             </tr>
         </c:forEach>

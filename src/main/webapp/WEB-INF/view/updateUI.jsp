@@ -13,8 +13,10 @@
 <body>
 <form action="<%=request.getContextPath()%>/link/update" method="post">
         <input type="hidden" name="id" value="${id}">
-        链接名称:<input type="text" value="${linkName}" /><br>
-        链接地址:<input type="text" value="${linkUrl}" />
+        链接名称:<input type="text" name="linkName" /><br>
+        链接地址:<input type="text" name="linkUrl" /><br>
+        链接排序:<input type="text" name="orderNo" /><br>
+
         <input type="submit" class="btn btn-primary" value="提交"/>
     </form>
 </body>

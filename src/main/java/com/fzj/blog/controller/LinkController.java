@@ -40,6 +40,7 @@ public class LinkController {
 //    修改
     @RequestMapping(value = "update",method = RequestMethod.POST)
     public String update(Link link){
+        System.out.print(link);
         linkService.updateLink(link);
         return "redirect:/link/list";
     }
