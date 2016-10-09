@@ -1,6 +1,8 @@
 package com.fzj.test;
 
+import com.fzj.blog.pojo.Blogger;
 import com.fzj.blog.pojo.Link;
+import com.fzj.blog.service.BloggerService;
 import com.fzj.blog.service.LinkService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -43,4 +45,9 @@ public class test {
         link.setOrderNo(10);
         linkService.updateLink(link);
     }
+    @Test
+    public  void  test4(){
+        linkService.getLinkById(1);
+    }
+
 }
