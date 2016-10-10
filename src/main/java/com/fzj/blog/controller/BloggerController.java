@@ -38,7 +38,6 @@ public class BloggerController {
         HttpSession session =request.getSession();
         session.setAttribute("username",username);
         session.setAttribute("password",password);
-
         if(username==null||username.equals("")){
             model.addAttribute("error","用户名不能为空");
             return "login";
@@ -66,15 +65,18 @@ public class BloggerController {
 
     }
 
+
     @RequestMapping(value = "update",method = RequestMethod.POST)
     public String update(Blogger blogger ){
         bloggerService.update(blogger);
-        return "redirect:/blogger/updateUI";
+        System.out.print("_____________________________________________________________________________________");
+        return "ok";
     }
 
-    @RequestMapping("updateUI/{id}")
-    private String updateUI(@PathVariable("id") Integer id ,HttpServletRequest request){
-        request.setAttribute("id",id);
-        return "redirect:/blogger/show";
+
+    @RequestMapping(value ="updateUI/{username}")
+    public String updateUI(@PathVariable("username") String username ,HttpServletRequest request){
+        request.setAttribute("username",username);
+        return "loggerUpdate";
     }
 }

@@ -9,7 +9,8 @@
 
     <!--修改-->
     <update id="update"  parameterType="com.fzj.blog.pojo.Blogger" >
-        UPDATE blogger SET userName=#{userName} and passWord=#{passWord} and nickName=#{nickName} and proFile=#{proFile};
+        UPDATE blogger SET passWord=#{passWord},nickName=#{nickName},proFile=#{proFile}
+        where userName=#{userName};
     </update>
 
 </mapper>
