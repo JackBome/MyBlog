@@ -15,7 +15,7 @@ import java.util.HashMap;
  */
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath*:spring/applicationContext*.xml"})
+@ContextConfiguration(locations = {"classpath*:spring/*.xml"})
 
 public class BloggerTest {
     @Autowired
