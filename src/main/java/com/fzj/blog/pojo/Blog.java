@@ -100,20 +100,4 @@ public class Blog implements Serializable{
     public void setDate(Date date) {
         this.date = date;
     }
-
-    @Override
-    public String toString() {
-        return "Blog{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", summary='" + summary + '\'' +
-                ", clickHit=" + clickHit +
-                ", content='" + content + '\'' +
-                ", blogNum=" + blogNum +
-                ", blogImg='" + blogImg + '\'' +
-                ", blogOrderNo=" + blogOrderNo +
-                ", blogCategory=" + blogCategory +
-                ", date=" + date +
-                '}';
-    }
 }

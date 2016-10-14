@@ -13,4 +13,8 @@
         where userName=#{userName};
     </update>
 
+    <!--查询-->
+    <select id="queryBlogger"  resultType="com.fzj.blog.pojo.Blogger">
+        SELECT * FROM blogger where id =#{id}
+    </select>
 </mapper>

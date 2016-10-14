@@ -13,4 +13,6 @@ public interface BloggerDao {
     public Blogger login(Map<String,Object> param);
 
     public int update(Blogger blogger);
+
+    public Blogger queryBlogger(Integer id);
 }

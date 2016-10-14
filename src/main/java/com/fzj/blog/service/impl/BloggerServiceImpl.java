@@ -33,4 +33,9 @@ public class BloggerServiceImpl implements BloggerService {
         }
         return 0;
     }
+
+    @Override
+    public Blogger queryBlogger(Integer id) {
+        return bloggerDao.queryBlogger(id);
+    }
 }

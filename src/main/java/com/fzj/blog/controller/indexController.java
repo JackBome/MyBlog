@@ -1,8 +1,10 @@
 package com.fzj.blog.controller;
 
-import com.fzj.blog.pojo.Blog;
-import com.fzj.blog.pojo.PageEntity;
+import com.fzj.blog.pojo.*;
+import com.fzj.blog.service.BlogCategoryService;
 import com.fzj.blog.service.BlogService;
+import com.fzj.blog.service.BloggerService;
+import com.fzj.blog.service.LinkService;
 import com.fzj.blog.util.PageUtil;
 import com.fzj.blog.util.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +29,14 @@ public class indexController {
     @Resource
     private BlogService blogService;
 
+    @Resource
+    private BloggerService bloggerService;
+
+    @Resource
+    private LinkService linkService;
+
+    @Resource
+    private BlogCategoryService blogCategoryService;
     /**
      * 主页
      * @param page
@@ -58,10 +68,16 @@ public class indexController {
 
         //获得博客信息
         List<Blog> blogList =blogService.list(map);
+        Blogger blogger =bloggerService.queryBlogger(1);
+        List<BlogCategory> blogCategory =blogCategoryService.list(map);
 
+        List<Link> linkList =linkService.queryAllLink(0,10);
         //获得总数
         Long total =blogService.getTotal(map);
         model.addAttribute("blogList",blogList);
+        model.addAttribute("blogCategory",blogCategory);
+        model.addAttribute("linkList",linkList);
+        model.addAttribute("blogger",blogger);
 //        mav.addObject("blogList",blogList);
         StringBuffer param =new StringBuffer();//查询参数
 
