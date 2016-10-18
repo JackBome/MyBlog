@@ -25,24 +25,24 @@
     <tr>
         <td>#</td>
         <td>名称</td>
-        <td>地址</td>
+        <td>数量</td>
         <td>排序</td>
         <td>删除</td>
         <td>修改</td>
     </tr>
     </thead>
     <tbody>
-        <c:forEach items="${linkList}" var="ll" varStatus="l">
+        <c:forEach items="${blogCategoryList}" var="ll" varStatus="l">
             <tr>
                 <td>${l.index+1}</td>
-                <td>${ll.linkName}</td>
-                <td>${ll.linkUrl}</td>
-                <td>${ll.orderNo}</td>
-                <td><a onclick="return confirm('确定要删除吗?')" href="<%=request.getContextPath()%>/link/delete/${ll.id}" class="btn btn-danger">删除</a></td>
-                <td><a href="#" onclick="showAtRight('<%=request.getContextPath()%>/link/updateUI/${ll.id}')" class="btn btn-info">修改</a></td>
+                <td>${ll.categoryName}</td>
+                <td>${ll.categoryNum}</td>
+                <td>${ll.categoryOrderNo}</td>
+                <td><a onclick="return confirm('确定要删除吗?')" href="<%=request.getContextPath()%>/BlogCategory/delete/${ll.id}" class="btn btn-danger">删除</a></td>
+                <td><a href="#" onclick="showAtRight('<%=request.getContextPath()%>/BlogCategory/updateUI/${ll.id}')" class="btn btn-info">修改</a></td>
             </tr>
         </c:forEach>
     </tbody>
-    <a class="btn btn-primary" href="#"  onclick="showAtRight('<%=request.getContextPath()%>/link/addUI')" id="add">添加</a>
+    <a class="btn btn-primary" href="#"  onclick="showAtRight('<%=request.getContextPath()%>/BlogCategory/addUI')" id="add">添加</a>
 </table>
 

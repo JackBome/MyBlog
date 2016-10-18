@@ -14,11 +14,10 @@
     <%--<link href="${pageContext.request.contextPath}/static/css/css.css" rel="stylesheet" type="text/css"/>--%>
     <%--<script src="${pageContext.request.contextPath}/static/js/jquery.min.js"></script>--%>
 <%--</head>--%>
-<body>
-    <form action="<%=request.getContextPath()%>/link/add" method="post">
-        链接名称:<input type="text" name="linkName"/>
-        链接地址:<input type="text" name="linkUrl"/>
+<%--<body>--%>
+    <form action="<%=request.getContextPath()%>/BlogCategory/add" method="post">
+        博客分类名称:<input type="text" name="categoryName"/>
         <input type="submit" class="btn btn-primary" value="提交">
     </form>
-</body>
+<%--</body>--%>
 <%--</html>--%>

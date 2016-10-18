@@ -44,7 +44,7 @@
             </div>
         </div>
         <div class="col-md-10">
-            <h3>${blog.title}</h3>
+            <h3><a href="${pageContext.request.contextPath}/Blog/articles/${blog.id}.html">${blog.title}</a></h3>
             <div class="mid">
                 分类:
                 <a>${blog.blogCategory.categoryName}</a>
@@ -60,7 +60,7 @@
     <div class="col-md-4">
         <form class="bs-example bs-example-form" role="form"></form>
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="Twitterhandle"></div>
+            <input type="text" class="form-control" placeholder="Search here"></div>
         <br>
         <div>
             <h4>分类</h4>

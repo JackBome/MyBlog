@@ -1,0 +1,81 @@
+body{
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    margin-left: 240px;
+    color: #444;
+    background-color: #f7f7f7;
+    color: #646464;
+    font-family: "Segoe UI", Arial, "Microsoft Yahei", sans-serif
+}
+.container{
+    margin-top: 80px;
+}
+.headName small{
+    color: rgb(247,123,111);
+    font-size:14px;
+}
+.col-md-8 {
+    float: left;
+    display: block;
+    padding-left: 70px;
+    margin-top: -26px;
+}
+.col-md-10 h3{
+    color: rgb(247,123,111);
+    padding-bottom: 25px;
+}
+.mid a{
+    color: rgb(247,123,111);
+}
+.col-md-4{
+    padding-top: 60px;
+}
+.col-md-10 .mid{
+    padding-top: 0px;
+}
+.col-md-2{
+    margin-left: -15px !important;
+}
+.col-md-2 .day{
+    background-color: rgb(247,123,111) !important;
+    width: 104px;
+    height: 55px;
+    text-align: center;
+    font-size: 26px;
+}
+.col-md-2 .month{
+    background-color: rgb(246,245,235) !important;
+    width: 104px;
+    height: 35px;
+    text-align: center;
+    font-size: 16px;
+}
+.table .day{
+    border-radius: 5px 5px 0px 0px;
+}
+.form-control{
+    border-radius: 5px 5px 0px 0px;
+}
+.input-group{
+    width: 270px;
+}
+.form-control{
+    border-radius: 4px !important;
+}
+.col-md-2 .table .day {
+    font-weight: bolder;
+    color: rgb(247,247,247);
+}
+.list-group-item{
+    background-color:#f7f7f7 !important;
+    border:0px!important;
+    margin-left: -50px !important;
+    width: 290px;
+}
+#headImg{
+    width: 50px;
+    height: 50px;
+    border:1px solid;
+    border-radius: 25px;
+}
