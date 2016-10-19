@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -29,6 +30,12 @@ public class LinkController {
         model.addAttribute("linkList",linkList);
         return "list";
     }
+//    @ResponseBody
+//    @RequestMapping(value = "list" ,method = RequestMethod.GET)
+//    public List<Link> Json(){
+//        List<Link> linkList =linkService.queryAllLink(0,10);
+//        return linkList;
+//    }
 
 //    删除
     @RequestMapping(value = "delete/{id}")
