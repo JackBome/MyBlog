@@ -18,7 +18,7 @@
     <mvc:default-servlet-handler/>
 
     <mvc:resources mapping="/static/**" location="/static/"/>
-
+    <mvc:resources mapping="/ueditor/**" location="/ueditor/" />
 
     <!--静态资源映射-->
     <!--
